@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8c1f69a3-c593-4175-b5e1-456f8f7b6b74">
+	<property name="ireport.zoom" value="1.1"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<parameter name="name" class="java.lang.String"/>
+	<parameter name="namewithInit" class="java.lang.String"/>
+	<parameter name="Reg_ID" class="java.lang.String"/>
+	<parameter name="NIC" class="java.lang.String"/>
+	<parameter name="Exam_Year" class="java.lang.String"/>
+	<parameter name="Subject" class="java.lang.String"/>
+	<parameter name="Grade" class="java.lang.String"/>
+	<parameter name="Marks" class="java.lang.String"/>
+	<parameter name="Teacher" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from student inner join mark on student.Reg_ID = mark.Reg_ID inner join exam on mark.Exam_ID = exam.Exam_ID inner join class on exam.Class = class.Class_ID;]]>
+	</queryString>
+	<field name="Reg_ID" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Full_Name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Name_with_initials" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DoB" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="City" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Gender" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Address1" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Address2" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Address3" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Mobile_No" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NIC" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ParentsName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ParentsMobile" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Grade" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Category" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Stream" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Exam_Year" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="School_Name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ID" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Exam_ID" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Marks" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ExamDate" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Time" class="java.sql.Time">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Class" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Class_ID" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Class_Name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Schedule_date" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Sche_time" class="java.sql.Time">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Teacher" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Subject" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Class_Fee" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Commision_Rate" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="95" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="555" height="33" uuid="f9572cc2-55e9-4767-a7f5-ba89a440676f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[AKURA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="0" y="59" width="553" height="22" uuid="6af9030d-fcd8-4beb-97b4-1cfec30ae022"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[No 127/2, Wakwella Road, Galle. | 0756563017 | akura@gmail.com]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="678" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="efc3d82c-b393-4d42-90f8-f9a6a59d2bd1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="10" width="247" height="25" uuid="984b39b4-24ff-4230-9b7b-c9852b29a3a6"/>
+				<textElement>
+					<font size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Student Result Report]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="386" y="10" width="167" height="20" uuid="d4e99622-0b96-4fc2-9b91-abed28837f3b"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="296" y="49" width="59" height="20" uuid="f3b5605e-1ff2-434c-9d0e-28cb12209d35"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[  NIC    :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="85" width="87" height="22" uuid="404a2c90-2c68-4740-a278-12319b3da54c"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Exam Year : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="47" width="87" height="22" uuid="3f1a8c62-46b7-4b96-a491-a24702adb151"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Reg ID    :   ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="97" y="454" width="68" height="22" uuid="ee816057-5481-41f6-89d5-2943eec7be4c"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[GRADE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="97" y="284" width="123" height="22" uuid="343f2ce4-7075-428d-a053-9de25b1e1455"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[FULL NAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="97" y="413" width="68" height="22" uuid="a772d124-314b-4599-b5bd-ef8762f74fe1"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[MARKS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="97" y="370" width="68" height="22" uuid="1ebe4b3a-dc8e-4460-90b0-a9749aa6c6ff"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[SUBJECT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="97" y="326" width="148" height="22" uuid="12c6186b-ed5f-4593-b323-c2c43942ce41"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[NAME WITH INITIALS]]></text>
+			</staticText>
+			<line>
+				<reportElement x="48" y="130" width="465" height="1" forecolor="#CCCCCC" uuid="e9a21055-7e03-47b1-9fee-cf725f451bb8"/>
+			</line>
+			<textField>
+				<reportElement x="247" y="284" width="266" height="20" uuid="36258bf9-6bf4-4307-9d00-e0b5b180635f"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="247" y="326" width="266" height="22" uuid="5674d689-873a-466f-88cd-7e806c472958"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{namewithInit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="97" y="49" width="185" height="20" uuid="8c2c1898-7c04-4c29-afae-b9014ca7320f"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Reg_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="369" y="49" width="170" height="18" uuid="c2bf757a-007c-49ec-b696-450225654066"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NIC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="97" y="85" width="148" height="20" uuid="4eca6f84-3795-4557-881b-282755c07dac"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Exam_Year}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="247" y="370" width="266" height="20" uuid="6204fe6e-f870-43ae-93c3-4e84d089fa7b"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Subject}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="247" y="454" width="266" height="20" uuid="cbb04efb-7fa5-4802-b903-77d7bc62c0ce"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Grade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="247" y="413" width="266" height="20" uuid="4c6e6b8b-7e6a-4525-8d4d-fd0f28f8f709"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Marks}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="48" y="169" width="465" height="27" uuid="bf7609fd-bcc3-4a3f-a946-973f7fd5ec48"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Akura class exam result report.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="48" y="196" width="465" height="23" uuid="dd50efbf-c601-4fa9-af6e-215a52b1ead9"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[This is use only represent your exam results of akura classes.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="311" y="647" width="228" height="20" uuid="e4b2d48f-c555-4d46-8b60-37cad76e44d7"/>
+				<textElement textAlignment="Right">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[This is the auto generated report]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="165" y="562" width="182" height="20" uuid="8e4941b4-a5f7-4937-92b9-b7b91d3f8131"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Teacher}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="33" y="562" width="110" height="20" uuid="71d8293f-f001-41d2-be33-afd130041bc7"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Teacher's Name]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<columnFooter>
+		<band height="9" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="bb3d1562-c8ea-4710-ae90-b9d469946115"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="775763b6-37d8-43af-b886-52fccef84e2d"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="c3537f7d-0824-4f22-85d8-e6f52c9b7c88"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="8ad22ef6-e2cd-44e3-af8d-02e62edc1046"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

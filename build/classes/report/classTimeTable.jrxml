@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" uuid="2624c0cf-3d6b-45dd-9505-cb0c63fe7c88">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#FFFFFF" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[select * from timeTbl_class;]]>
+	</queryString>
+	<field name="Class_ID" class="java.lang.String"/>
+	<field name="Class_Name" class="java.lang.String"/>
+	<field name="Grade" class="java.lang.String"/>
+	<field name="Schedule_date" class="java.lang.String"/>
+	<field name="Sche_time" class="java.sql.Time"/>
+	<field name="subjectName" class="java.lang.String"/>
+	<field name="teacherName" class="java.lang.String"/>
+	<field name="Teacher" class="java.lang.String"/>
+	<field name="Subject" class="java.lang.String"/>
+	<title>
+		<band height="104" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="0" y="0" width="802" height="67" uuid="a9bfc4d1-7436-4368-8967-d7887ecc8110"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="54" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[CLASS TIME TABLE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="232" y="67" width="568" height="37" uuid="fab8dd7f-9764-4b2e-bfc8-fc22ce293132"/>
+				<textElement textAlignment="Right">
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[Akura]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="34" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="5" width="802" height="20" backcolor="#666666" uuid="b2e0a3e7-4394-478b-9eb7-a0410fd0daea"/>
+				<staticText>
+					<reportElement style="Column header" x="0" y="0" width="96" height="15" uuid="098cda64-9bc7-48cc-9624-590cc09acdbd"/>
+					<text><![CDATA[Class_ID]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="97" y="0" width="120" height="15" uuid="66669836-b9c5-42c5-8e45-7a572b7e6d3e"/>
+					<text><![CDATA[Class_Name]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="217" y="0" width="102" height="15" uuid="82425a3c-e011-445a-80b1-06cfee025881"/>
+					<text><![CDATA[Grade]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="319" y="0" width="105" height="15" uuid="5ce90cb4-df32-4dcb-be92-9c5c3857d4ad"/>
+					<text><![CDATA[Schedule_date]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="435" y="0" width="97" height="15" uuid="89996813-199a-4c41-83f7-6e8951118c8c"/>
+					<text><![CDATA[Sche_time]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="532" y="0" width="106" height="15" uuid="3a3deca9-c903-42b5-9d21-9e0156343221"/>
+					<text><![CDATA[subjectName]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="638" y="0" width="162" height="15" uuid="f882995a-7e30-4704-af2a-bfb85a639e32"/>
+					<text><![CDATA[teacherName]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="97" y="16" width="705" height="1" uuid="35c499dc-e8ca-4e07-a4a4-bd7ffab9b429"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<frame>
+				<reportElement x="0" y="2" width="802" height="15" uuid="9bf7ae74-c189-4cec-9180-ee9283b62c1b"/>
+				<textField>
+					<reportElement style="Detail" x="0" y="0" width="96" height="15" uuid="9f97c893-d849-4a6f-b970-33a58a7100b8"/>
+					<textFieldExpression><![CDATA[$F{Class_ID}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<textField>
+				<reportElement style="Detail" x="638" y="0" width="162" height="15" uuid="d2b874d6-babd-4e59-b418-8d6822dde0f6"/>
+				<textFieldExpression><![CDATA[$F{teacherName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="532" y="0" width="106" height="15" uuid="ff84f66b-d77c-4ad7-aeb3-e8bff5a88b8e"/>
+				<textFieldExpression><![CDATA[$F{subjectName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="435" y="0" width="97" height="15" uuid="59049c09-61cd-436d-b4e4-89964671eb27"/>
+				<textFieldExpression><![CDATA[$F{Sche_time}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="319" y="0" width="105" height="15" uuid="edd54f33-786b-46e2-8729-e7370eaf456a"/>
+				<textFieldExpression><![CDATA[$F{Schedule_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="217" y="0" width="102" height="15" uuid="1a9a7e02-79d7-4a52-b9c7-9f50f3949abb"/>
+				<textFieldExpression><![CDATA[$F{Grade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="97" y="0" width="120" height="15" uuid="f8d6b1ca-8250-4068-b09a-c26da7c496f8"/>
+				<textFieldExpression><![CDATA[$F{Class_Name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="39" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="671" y="0" width="131" height="20" forecolor="#000000" uuid="305e6281-ea14-41e4-b775-8bc754127bdc"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="267" height="20" uuid="b08062a2-3151-466d-97eb-41177906a315"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Akura Class Time Table Report]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
